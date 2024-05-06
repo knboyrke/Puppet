@@ -365,6 +365,12 @@
                     this.h3Arr_Level1.push(h3Arr_Level2);
                 }
 
+                // Make the edge color gray
+                for(let i = 0; i<this.nodeNumber;i++){
+                    this.nodes += `linkStyle ` + i + ` stroke:#808080, stroke-width:2px\n`;
+                }
+
+                
                 // Generate Diagrams
                 this.diagram = this.nodes;
             },
@@ -788,6 +794,8 @@
     }
 
     #zoomin, #zoomout {
+        position: relative;
+        top:-20px;
         background: linear-gradient(to bottom right, #EF4765, #FF9A5A);
         border: 0;
         border-radius: 20px;
